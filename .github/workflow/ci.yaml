@@ -5,8 +5,8 @@ on:
     types: [published]
 
 jobs:
-  release:
-    name: Release
+  build:
+    name: Build and publish artifacts
     # strategy:
     #   matrix:
     #     kind: ['linux', 'windows', 'macOS']
