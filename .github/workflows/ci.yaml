@@ -24,7 +24,7 @@ jobs:
             friendly-name: macos-x64
     runs-on: ${{ matrix.os }}
 
-steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v1
 
