@@ -41,7 +41,7 @@ jobs:
           release_name="App-$tag-${{ matrix.friendly-name }}"
 
           # Build everything
-          dotnet publish ConsoleApp1/ConsoleApp1.csproj --framework net5.0 --runtime "${{ matrix.target }}" -c Release -o "$release_name"
+          dotnet publish ConsoleApp1/ConsoleApp1.csproj --framework net5.0 --runtime "${{ matrix.target }}" -c Release -o "$release_name" -p:PublishSingleFile=true --self-contained true -p:DebugType=embedded -p:IncludeNativeLibrariesForSelfExtract=true
 
           # Pack files
           if [ "${{ matrix.target }}" == "win-x64" ]; then
